@@ -15,12 +15,12 @@ export class NavbarComponent implements OnInit {
   }
 
   signOut(): void {
-    this.http.delete('http://localhost:3000/session').toPromise().then(data => {
+    try {
       window.localStorage.removeItem('token');
       this.router.navigate(['signin']);
-    }).catch(err => {
+    }catch (err) {
       window.alert('Log out failed');
-    });
+    }
   }
 
 }

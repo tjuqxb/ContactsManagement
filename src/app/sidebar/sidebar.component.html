@@ -1,7 +1,10 @@
 <div class="col-sm-3 col-md-2 sidebar">
   <ul class="nav nav-sidebar">
-    <li class="active"><a routerLink="/contacts">Contacts<span class="sr-only">(current)</span></a></li>
-    <li><a href="/tags">Tags</a></li>
-    <li><a routerLink="/about">About</a></li>
+    <li [ngClass]="{active: this.path === 'contacts'}" ><a routerLink="/contacts">Contacts
+      <span *ngIf="this.path === 'contacts'" class="sr-only">(current)</span></a></li>
+    <li [ngClass]="{active: this.path === 'tags'}" ><a routerLink="/tags">Tags
+      <span *ngIf="this.path === 'tags'" class="sr-only">(current)</span></a></li>
+    <li [ngClass]="{active: this.path === 'about'}" ><a routerLink="/about">About
+      <span *ngIf="this.path === 'about'" class="sr-only">(current)</span></a></li>
   </ul>
 </div>

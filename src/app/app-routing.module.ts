@@ -62,7 +62,7 @@ const routes: Routes = [{
         component: TagNewComponent
       },
       {
-        path: 'edit',
+        path: 'edit/:id',
         component: TagEditComponent
       }
     ]

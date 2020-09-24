@@ -22,7 +22,7 @@ export class SigninComponent implements OnInit {
 
   handleSubmit(): void {
     const formData = this.signInForm;
-    this.http.post('http://localhost:3000/session', formData).toPromise().then((data: any) => {
+    this.http.post('http://localhost:8000/users/signin', formData).toPromise().then((data: any) => {
       this.email_err = '';
       window.alert('Sign in successfully!');
       window.localStorage.setItem('token', data.token);

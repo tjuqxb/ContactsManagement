@@ -23,7 +23,7 @@ export class SignupComponent implements OnInit {
 
   handleSubmit(): void {
     const formData = this.signUpForm;
-    this.http.post('http://localhost:3000/users', formData).toPromise().then((data: any) => {
+    this.http.post('http://localhost:8000/users/register', formData).toPromise().then((data: any) => {
       this.email_err = '';
       window.alert('Register successfully!');
       window.localStorage.setItem('token', data.token);

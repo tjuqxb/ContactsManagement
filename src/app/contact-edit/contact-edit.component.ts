@@ -12,7 +12,7 @@ export class ContactEditComponent implements OnInit {
     name: '',
     email: '',
     phone: '',
-    id: 0
+    id: ''
   }
 
   constructor(private router: Router, private route: ActivatedRoute,

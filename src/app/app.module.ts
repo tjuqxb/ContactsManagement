@@ -19,7 +19,7 @@ import {FormsModule} from '@angular/forms';
 import {GlobalInterceptor} from './global.interceptor';
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import { AboutComponent } from './about/about.component';
-
+import { ColorPickerModule } from 'ngx-color-picker';
 
 
 @NgModule({
@@ -42,7 +42,8 @@ import { AboutComponent } from './about/about.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ColorPickerModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
